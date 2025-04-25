@@ -68,7 +68,29 @@ with col1:
     st.image(imagen_astra, width=150, caption="Mini Astra 2.0")
 with col2:
     st.title("✨ Mini Astra 2.0")
-    st.markdown("#### Tu asistente educativa con alma de elfa galáctica")
+    st.markdown("#### Tu asistente educativa con alma galáctica")
+
+# Expander con ejemplos de preguntas
+with st.expander("📋 ¿Qué puedo preguntarle a Mini Astra?"):
+    st.markdown("""
+**📚 Conocimiento general**
+- ¿Qué es una variable?
+- ¿Cuál es la capital de Japón?
+
+**💻 Programación**
+- ¿Cómo se usa un `if` en Python?
+- ¿Qué es una lista?
+- ¿Para qué sirve un bucle `for`?
+
+**🧪 Ciencia**
+- ¿Qué es un agujero negro?
+- ¿Cómo funciona un satélite?
+
+**🌌 Creativas**
+- Cuéntame un chiste
+- Invéntame un personaje galáctico
+""")
+
 
 # Entrada del usuario
 pregunta = st.text_input("🌠 Escribe tu pregunta para Mini Astra:")
@@ -92,6 +114,24 @@ def mini_astra_educativa(pregunta):
         return "🧙‍♀️ *En la simplicidad del código hallarás la claridad de la mente.*"
     elif "adiós" in pregunta or "bye" in pregunta:
         return "🌌 Hasta pronto, Martín. Que las estrellas guíen tu próximo proyecto."
+    elif "capital" in pregunta:
+        return "La capital de Japón es Tokio 🗼"
+
+    elif "lista" in pregunta:
+        return "Una lista en Python almacena varios elementos. Ejemplo:\n```python\nfrutas = ['manzana', 'banana', 'kiwi']\n```"
+
+    elif "satélite" in pregunta:
+        return "Un satélite es un objeto que orbita otro. Por ejemplo, los satélites artificiales orbitan la Tierra para telecomunicaciones y observación."
+
+    elif "agujero negro" in pregunta:
+        return "Un agujero negro es una región del espacio donde la gravedad es tan intensa que ni la luz puede escapar."
+
+    elif "personaje" in pregunta:
+        return "Tu personaje se llama **Raelya**, una elfa interestelar que recorre galaxias en busca de sabiduría ancestral 🌌🧝‍♀️"
+
+    elif "motivación" in pregunta:
+        return "✨ Incluso una estrella empieza como polvo cósmico. ¡Sigue brillando, Martín!"
+
     else:
         return "🤖 Hmm... eso no lo tengo aún en mi base estelar. ¡Enséñamelo tú!"
 
